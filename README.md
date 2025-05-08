@@ -1,4 +1,4 @@
-# FSUJENA_2025_species_determination
+# FSUJENA 2025 species determination
 
 Hi, this is description and script that we will use in the practical course. 
 I prepared some tasks for those who have already had the skills for Linux or experienced this kind of analysis. 
@@ -35,6 +35,7 @@ Day3
 To use the same environment for the analysis, please make it available to use Google Cloud Shell, an online shell of Linux (Debian, x86_64). We will use a free version of this cloud service, which can use Linux basic command line and 5GB storage (see the documentation: https://cloud.google.com/shell/docs). The Google account is required. If you have the account, just go to the following link: https://shell.cloud.google.com/
 
 **Optional**
+
 The free version of the cloud shell is only for temporary use for the course. If you do not use the shell for 120 days, your account will be removed. There is also a usage limit (50 hours per week). So, in order to use the same environment after this course and continue the analysis, it would be good to set up the environment on your own computer. If you want to do this, see the following... 
 
 **Linux users**: run the analysis on your terminal instead of using Google Cloud Shell
@@ -55,12 +56,18 @@ wsl
 
 ## Day1
 ## Basic commands of Linux
+See the following link about Linux basic commands. The followings are the notes on some commands.
 
 cd
+
 mkdir
+
 ls
+
 cat
+
 awk
+
 grep
 
 
