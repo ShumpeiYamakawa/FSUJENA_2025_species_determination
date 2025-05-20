@@ -11,17 +11,18 @@ I prepared some tasks for those who have already had the skills for Linux or exp
 2. Installing the software for bioinformatic analysis
 -> seqkit, blast, R, R packages (devtool, tidyverse)
 
+3. Command line
 
-**Day 2:** BLAST-based species determination
+**Day 2:** Environmental DNA metabarcoding analysis 1 (BLAST search)
 
 1. Explanation about the sequence files and eDNA metabarcoding analysis
 
-2. Command-line-based BLAST
+2. Usage of BLAST 
 
-3. Making a shell script for high-throughput analysis
+3. Making a BLAST tophit table 
 
 
-**Day 3:** Species determination from raw data of eDNA metabarcoding analysis
+**Day 3:** Environmental DNA metabarcoding analysis 1 (analysis from raw sequence data)
 
 1. Rawdata
 
