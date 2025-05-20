@@ -3,15 +3,28 @@
 Hi, this is description and script that we will use in the practical course. 
 I prepared some tasks for those who have already had the skills for Linux or experienced this kind of analysis. 
 
-## Aims
-1. Identification of the species from the eDNA sequences
-2. Reconstruction of the phylogeny of the species 
+## Contents
+**Day 1:** Learning the usage of the Linux basic commands and installing the software
 
-You will learn...  
-・Usage of the command line and Linux  
-・Installing the bioinformatic tools/software  
-・Usage of the software  
-・Interpretation of the basic bioinformatic analysis (blast, alignment, phylogenic tree)  
+1. Usage and principles of the Linux basic command line
+
+2. Installing the software for bioinformatic analysis
+-> seqkit, blast, R, R packages (devtool, tidyverse)
+
+
+**Day 2:** BLAST-based species determination
+
+1. Explanation about the sequence files and eDNA metabarcoding analysis
+
+2. Command-line-based BLAST
+
+3. Making a shell script for high-throughput analysis
+
+
+**Day 3:** Species determination from raw data of eDNA metabarcoding analysis
+
+1. Rawdata
+
 
 ## Schedule
 Day0
@@ -131,6 +144,12 @@ sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_
 # install R itself
 sudo apt install --no-install-recommends r-base
 ```
+
+```R
+# install devtool
+install.packages("devtools")
+```
+
 
 
 ```bash
