@@ -146,12 +146,38 @@ sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_
 sudo apt install --no-install-recommends r-base
 ```
 
-```R
-# install devtool
-install.packages("devtools")
+
+
+
+**update/developer environemnts**
+```bash
+sudo apt update
+sudo apt install -y \
+    liblapack-dev \
+    libblas-dev \
+    gfortran \
+    libpng-dev \
+    libgsl-dev \
+    libtiff5-dev \
+    libjpeg-dev \
+    libxml2-dev \
+    libcurl4-openssl-dev \
+    libxt-dev \
+    libfftw3-dev \
+    libreadline-dev \
+    zlib1g-dev \
+    libx11-dev \
+    libncurses-dev \
+    libbz2-dev \
+    liblzma-dev
 ```
 
-
-
-```bash
-trimal -in input.aln -out output.aln -htmlout output.html -gt 0.9 -cons 60
+**R**
+```R
+# install the softwares
+install.packages(c("RcppEigen", "png", "deldir", "interp", "latticeExtra"))
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("ShortRead")
+BiocManager::install("dada2")
+```
