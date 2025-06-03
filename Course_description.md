@@ -1,4 +1,4 @@
-# Environmental DNA (eDNA) Metabarcoding /FSUJENA 2025 species determination corse
+# Environmental DNA (eDNA) Metabarcoding 
 
 Hi, this is description and script that we will use in the practical course. 
 I prepared some tasks for those who have already had the skills for Linux or experienced this kind of analysis. 
@@ -27,6 +27,8 @@ I prepared some tasks for those who have already had the skills for Linux or exp
 
 
 ## Materials
+
+The scripts and files which will be used in the course have been uploaded in this github page. The slides are also available in 
 
 **Day 0**
 
