@@ -1,50 +1,30 @@
-# FSUJENA 2025 species determination
+# Environmental DNA (eDNA) Metabarcoding /FSUJENA 2025 species determination corse
 
 Hi, this is description and script that we will use in the practical course. 
 I prepared some tasks for those who have already had the skills for Linux or experienced this kind of analysis. 
 
 ## Contents
-**Day 1:** Learning the usage of the Linux basic commands and installing the software
+**Day 1** 
 
-1. Usage and principles of the Linux basic command line
+1. Overview of the eDNA metabarcoding analysis
 
-2. Installing the software for bioinformatic analysis
--> seqkit, blast, R, R packages (devtool, tidyverse)
+2. Metabarcoding analysis 1: Getting the amplicon sequences from raw data 1
 
-3. Command line
+**Day 2** 
 
-**Day 2:** Environmental DNA metabarcoding analysis 1 (BLAST search)
+1. Metabarcoding analysis 2: Annotation of the amplicon sequences
 
-1. Explanation about the sequence files and eDNA metabarcoding analysis
+2. Metabarcoding analysis 3: Making an annotation table
 
-2. Usage of BLAST 
+**Day 3** 
 
-3. Making a BLAST tophit table 
-
-
-**Day 3:** Environmental DNA metabarcoding analysis 1 (analysis from raw sequence data)
-
-1. Rawdata
+1. Own 
 
 
-## Schedule
-Day0
-1. Creating the google cloud shell account
+## Day0:
 
-Day1  
-1. Basic commands of Linux
-2. Installing the software
+**To start the analysis smoothly, set up the environments and install some software with reference to the following**
 
-Day2
-1. Handling of fasta file (the usage of seqkit)
-2. BLAST search
-
-Day3
-1. Alignment and trimming
-2. Maximum-likehood tree
-3. Tree visualization
-
-## Day0
 ## Google Could shell 
 To use the same environment for the analysis, please make it available to use Google Cloud Shell, an online shell of Linux (Debian, x86_64). We will use a free version of this cloud service, which can use Linux basic command line and 5GB storage (see the documentation: https://cloud.google.com/shell/docs). The Google account is required. If you have the account, just go to the following link: https://shell.cloud.google.com/
 
@@ -52,9 +32,9 @@ To use the same environment for the analysis, please make it available to use Go
 
 The free version of the cloud shell is only for temporary use for the course. If you do not use the shell for 120 days, your account will be removed. There is also a usage limit (50 hours per week). So, in order to use the same environment after this course and continue the analysis, it would be good to set up the environment on your own computer. If you want to do this, see the following... 
 
-**Linux users**: run the analysis on your terminal instead of using Google Cloud Shell
+**Linux users**: run the analysis on your "Terminal" instead of using Google Cloud Shell
 
-**Mac users**: same as Linux users, but some commands do not work with the default (e.g. wget), so you need to install some software as shown below.
+**Mac users**: same as Linux users ("Terminal" can be found in the "Utilities" folder), but some commands do not work with the default (e.g. wget), so you need to install some software as shown below.
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" ##Install Homebrew
@@ -68,70 +48,52 @@ wsl --install
 wsl
 ```
 
-## Day1
 ## Basic commands of Linux
-See the following link about Linux basic commands. The followings are the notes on some commands.
+If you are not familiar with the Linux command lines, see the following link about Linux basic commands. 
 
-cd
-
-mkdir
-
-ls
-
-cat
-
-awk
-
-grep
-
+**Turotial:** https://ubuntu.com/tutorials/command-line-for-beginners#1-overview
 
 ## Installing the software
+The following software is required for the analysis. Mainly, you can just copy and paste them in your terminal and see if they are working.
+You need to change the directory path and so on according to your location.
 
-**blast**
+**1. Creating the working directory and moving to there**
+```bash
+makir test_meta
+cd test_meta
+```
+
+**2. blast**
 ```bash
 wget https://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.16.0+-x64-linux.tar.gz
 tar -xvzf ncbi-blast-2.16.0+-x64-linux.tar.gz
-echo 'export PATH="/home/shumpei_yamakawa/test/ncbi-blast-2.16.0+/bin:$PATH"' >> ~/.bashrc; source ~/.bashrc
+cd ncbi-blast-2.16.0+/bin
+pwd 
+#Copy the displayed path!! 
+echo 'export PATH="**YOUR PATH***:$PATH"' >> ~/.bashrc; source ~/.bashrc
+#Paste the path you copied to ***YOUR PATH***!!
+
+blastp -h
+#If you see the description about Blast Search, then the installation worked.
 ```
 
-**mafft**
+**3. seqkit**
 ```bash
-wget https://mafft.cbrc.jp/alignment/software/mafft-7.525-without-extensions-src.tgz
-cd core
-make clean; make; sudo make install
-```
-
-**trimal**
-```bash
-wget https://github.com/inab/trimal/releases/download/v1.5.0/trimAl_Linux_x86-64.zip
-unzip trimAl_Linux_x86-64.zip
-echo 'export PATH="/home/shumpei_yamakawa/test/trimal-trimAl/source:$PATH"' >> ~/.bashrc;  source ~/.bashrc
-```
-
-**RAxML**
-```bash
-wget https://github.com/stamatak/standard-RAxML.git
-unzip master.zip
-cd standard-RAxML-master/
-make -f Makefile.gcc 
-rm *.o
-make -f Makefile.SSE3.gcc 
-rm *.o
-make -f Makefile.PTHREADS.gcc 
-rm *.o
-make -f Makefile.SSE3.PTHREADS.gcc
-echo 'export PATH="/home/shumpei_yamakawa/test/standard-RAxML-master:$PATH"' >> ~/.bashrc;  source ~/.bashrc
-```
-
-**seqkit**
-```bash
+cd ~/test_meta
+#move to the test directory
 wget https://github.com/shenwei356/seqkit/releases/download/v2.10.0/seqkit_linux_amd64.tar.gz
 tar -xvzf seqkit_linux_amd64.tar.gz 
-sudo cp seqkit /usr/local/bin/ 
+sudo cp seqkit /usr/local/bin/
+
+seqkit -h
+#If you see the description about Blast Search, then the installation worked.
 ```
 
-**R**
+**4. R**
 ```bash
+cd ~/test_meta
+#move to the test directory
+
 # update indices
 sudo apt update -qq
 # install two helper packages we need
@@ -144,12 +106,10 @@ wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sud
 sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
 # install R itself
 sudo apt install --no-install-recommends r-base
+
 ```
 
-
-
-
-**update/developer environemnts**
+**5. update/developer environments**
 ```bash
 sudo apt update
 sudo apt install -y \
@@ -172,7 +132,11 @@ sudo apt install -y \
     liblzma-dev
 ```
 
-**R**
+**dada2**
+```bash
+R
+```
+
 ```R
 # install the softwares
 install.packages(c("RcppEigen", "png", "deldir", "interp", "latticeExtra"))
@@ -181,3 +145,8 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 BiocManager::install("ShortRead")
 BiocManager::install("dada2")
 ```
+
+
+
+
+
