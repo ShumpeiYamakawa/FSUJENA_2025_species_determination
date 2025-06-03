@@ -28,12 +28,38 @@ I prepared some tasks for those who have already had the skills for Linux or exp
 
 ## Materials
 
-Day 0:
+**Day 0**
 
-Day 1:
+Script and description: Day_0.md
 
-Day 2: 
+Slides: 
 
+
+**Day 1**
+
+Script and description: Day_1_2_DADA2_analysis.md
+
+Files:
+Sample5_L001_R1_001.fastq.gz
+https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abcfaa1f05052d848759684240aeb4c01cd133/Sample5_L001_R1_001.fastq.gz
+
+Sample5_L001_R2_001.fastq.gz
+https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abcfaa1f05052d848759684240aeb4c01cd133/Sample5_L001_R2_001.fastq.gz
+
+Slides: 
+
+
+**Day 2** 
+
+Script and description: Day_1_2_DADA2_analysis.md
+Files: 
+Slides: 
+
+
+**Day 3**
+
+Script and description: Day3.md
+Files: 
 
 
 ## Day0:
