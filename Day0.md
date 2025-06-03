@@ -1,7 +1,7 @@
 ## Day0:
 
-To start the analysis smoothly, set up the environments and install some software with reference to the following!! 
-**If you have problems about this setting up, please let me know before the teaching will start!!**
+To start the analysis smoothly, set up the environments and install some software with reference to the following. 
+**If you have problems with this setup, please let me know before the teaching will start!!**  You can come to my office or send an email to shumpei.yamakawa**@**gmail.com (remove **). I will be albe to do short introduction about linux command-lines before the course, so feel free to ask me.
 
 ## Google Could shell 
 To use the same environment for the analysis, please make it available to use Google Cloud Shell, an online shell of Linux (Debian, x86_64). We will use a free version of this cloud service, which can use Linux basic command line and 5GB storage (see the documentation: https://cloud.google.com/shell/docs). The Google account is required. If you have the account, just go to the following link: https://shell.cloud.google.com/
@@ -139,7 +139,7 @@ R
 
 ```
 
-**5. dada2: the R package for metabarcoding analysis**
+**6. dada2: the R package for metabarcoding analysis**
 
 R provides a lot of the "packages" which are designed for specific analysis, and the package "dada2" performs to "infer exact amplicon sequence variants (ASVs) from amplicon data (https://benjjneb.github.io/dada2/)". This package needs to be installed in R console.
 
