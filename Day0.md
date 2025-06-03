@@ -1,6 +1,7 @@
 ## Day0:
 
-To start the analysis smoothly, set up the environments and install some software with reference to the following!! **If you have problems about this setting up, please let me know before the teaching will start!!**
+To start the analysis smoothly, set up the environments and install some software with reference to the following!! 
+**If you have problems about this setting up, please let me know before the teaching will start!!**
 
 ## Google Could shell 
 To use the same environment for the analysis, please make it available to use Google Cloud Shell, an online shell of Linux (Debian, x86_64). We will use a free version of this cloud service, which can use Linux basic command line and 5GB storage (see the documentation: https://cloud.google.com/shell/docs). The Google account is required. If you have the account, just go to the following link: https://shell.cloud.google.com/
