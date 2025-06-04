@@ -1,14 +1,13 @@
 ## Day0:
 
-To start the analysis smoothly, set up the environments and install some software with reference to the following. 
-**If you have problems with this setup, please let me know before the teaching will start!!**  You can come to my office or send an email to shumpei.yamakawa**@**gmail.com (remove **). I will be albe to do short introduction about linux command-lines before the course, so feel free to ask me.
+To start the analysis smoothly, set up the environments and install the software that we will use in the course with reference to the following. **If you have problems with this setup, please let me know before the teaching will start!!**  You can come to my office or send an email to shumpei.yamakawa**@**gmail.com (remove **). I will be albe to do short introduction about linux command-lines before the course, so feel free to ask me.
 
 ## Google Could shell 
-To use the same environment for the analysis, please make it available to use Google Cloud Shell, an online shell of Linux (Debian, x86_64). We will use a free version of this cloud service, which can use Linux basic command line and 5GB storage (see the documentation: https://cloud.google.com/shell/docs). The Google account is required. If you have the account, just go to the following link: https://shell.cloud.google.com/
+To use the same environment for the analysis, please make it available to use Google Cloud Shell, an online shell of Linux (Debian, x86_64). We will use a free version of this cloud service, which can use Linux basic command line and 5 GB storage (see the documentation: https://cloud.google.com/shell/docs). The Google account is required. If you have the account, just go to the following link: https://shell.cloud.google.com/
 
 **Optional**
 
-The free version of the cloud shell is only for temporary use for the course. If you do not use the shell for 120 days, your account will be removed. There is also a usage limit (50 hours per week). So, in order to use the same environment after this course and continue the analysis, it would be good to set up the environment on your own computer. If you want to do this, see the following... 
+The free version of the cloud shell is only for temporary use. For example, if you do not use the shell for 120 days, your account will be removed. There is also a usage limit (50 hours per week). So, in order to use the same environment after this course and continue the analysis, it would be good to set up the environment on your own computer. If you want to do this, see the following... 
 
 **Linux users**: run the analysis on your "Terminal" instead of using Google Cloud Shell
 
@@ -33,7 +32,10 @@ If you are not familiar with the Linux command lines, see the following link abo
 
 ## Installing the software
 The following software is required for the analysis. Mainly, you can just copy and paste them in your terminal and see if they are working.
-You need to change the directory path and so on according to your location.
+You need to change the directory path according to your location.
+
+**0. Opening 
+
 
 **1. Creating the working directory and moving to there**
 ```bash
