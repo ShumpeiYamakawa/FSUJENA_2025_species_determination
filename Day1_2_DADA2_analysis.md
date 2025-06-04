@@ -1,3 +1,15 @@
+## Day1
+
+**Download the raw read sequences**
+```bach
+cd test_meta
+mkdir Sample5
+cd Sample5
+
+wget
+wget
+```
+
 **scripts**
 
 ```R
