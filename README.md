@@ -1,45 +1,50 @@
 # Environmental DNA (eDNA) Metabarcoding 
 
-Hi, this is description and script that we will use in the practical course. 
-I prepared some tasks for those who have already had the skills for Linux or experienced this kind of analysis. 
+In this course, you will learn species identification methods based on sequence information, with a particular focus on environmental DNA (eDNA) metabarcoding. The course is divided into three sessions. On Days 1 and 2, the principles and analysis methods of eDNA metabarcoding will be introduced step by step through hands-on exercises. On Day 3, you will apply the methods you have learned to identify species from raw data in a practical exercise, aiming to improve their technical skills.
+
 
 ## Contents
 
-**Day 0 (-13.06)**
+**Day 0 (-13.06, before the course begins)**
 
-1. Installing the software using command line before acutal classes
+・Software installation via the command line
 
-**Day 1 (13.06)** 
+・**See Day0_setting.md and Day0.pdf**
 
-1. Overview of the eDNA metabarcoding analysis
+**Day 1 (13.06)**
 
-2. Metabarcoding analysis 1: Getting the amplicon sequences from raw data 1
+・Overview of eDNA metabarcoding analysis
 
-**Day 2 (20.06)** 
+・Metabarcoding Analysis 1: Extracting amplicon sequences from raw data
 
-1. Metabarcoding analysis 2: Annotation of the amplicon sequences
+**Day 2 (20.06)**
 
-2. Metabarcoding analysis 3: Making an annotation table
+・Metabarcoding Analysis 2: Annotating the amplicon sequences
 
-**Day 3 (27.06)** 
+・Metabarcoding Analysis 3: Creating an annotation table
 
-1. 
+**Day 3 (27.06)**
+
+・Practical exercise: Species identification from raw data using learned methods
+
 
 
 ## Materials
 
-The scripts and files which will be used in the course have been uploaded in this github page. The slides are also available in 
+The scripts, slides, and files that will be used in the course have been uploaded to this GitHub page. 
 
 **Day 0**
 
-Script and description: Day_0.md
+Script and description: Day0_setting.md
 
-Slides: 
+Slides: Day0.pdf
 
 
 **Day 1**
 
-Script and description: Day_1_2_DADA2_analysis.md
+Script and description: Day1_DADA2_analysis.md (not uploaded yet)
+
+Slides: Day1.pdf (not uploaded yet)
 
 Files:
 Sample5_L001_R1_001.fastq.gz
@@ -48,20 +53,35 @@ https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abc
 Sample5_L001_R2_001.fastq.gz
 https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abcfaa1f05052d848759684240aeb4c01cd133/Sample5_L001_R2_001.fastq.gz
 
-Slides: 
-
 
 **Day 2** 
 
-Script and description: Day_1_2_DADA2_analysis.md
-Files: 
-Slides: 
+Script and description: Day1_2_DADA2_analysis.md (not uploaded yet), Day2_blast.md (not uploaded yet)
+
+Slides: Day2.pdf (not uploaded yet)
+
+Files:
 
 
 **Day 3**
 
-Script and description: Day3.md
-Files: 
+Script and description: Day3.md (not uploaded yet)
+
+Slides: Day3.pdf (not uploaded yet)
+
+Files:
+Sample6_L001_R1_001.fastq.gz
+https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abcfaa1f05052d848759684240aeb4c01cd133/Sample6_L001_R1_001.fastq.gz
+
+Sample6_L001_R2_001.fastq.gz
+https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abcfaa1f05052d848759684240aeb4c01cd133/Sample6_L001_R2_001.fastq.gz
+
+Sample7_L001_R1_001.fastq.gz
+https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abcfaa1f05052d848759684240aeb4c01cd133/Sample7_L001_R1_001.fastq.gz
+
+Sample7_L001_R2_001.fastq.gz
+https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abcfaa1f05052d848759684240aeb4c01cd133/Sample7_L001_R2_001.fastq.gz
+
 
 
 ## Contact
