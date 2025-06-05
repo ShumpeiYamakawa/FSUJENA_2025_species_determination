@@ -1,17 +1,28 @@
-## Day0:
+# Day0:
 
-To start the analysis smoothly, set up the environments and install the software that we will use in the course with reference to the following. **If you have problems with this setup, please let me know before the teaching will start!!**  You can come to my office or send an email to shumpei.yamakawa**@**gmail.com (remove **). I will be albe to do short introduction about linux command-lines before the course, so feel free to ask me.
+To ensure a smooth start to the analysis, please set up your environment and install the software we will use in the course by following the instructions below. If you encounter any issues during the setup, **contact me before the course begins!**. You can either visit my office or send an email to shumpei.yamakawa**@**gmail.com (remove **). 
 
-## Google Could shell 
-To use the same environment for the analysis, please make it available to use Google Cloud Shell, an online shell of Linux (Debian, x86_64). We will use a free version of this cloud service, which can use Linux basic command line and 5 GB storage (see the documentation: https://cloud.google.com/shell/docs). The Google account is required. If you have the account, just go to the following link: https://shell.cloud.google.com/
 
+****For a tutorial on installation, see Day0.pdf, which was uploaded to this GitHub page.****
+
+
+## 1. Google Could shell Setup
+
+Unlike desktop applications, most software used for bioinformatic analysis runs only through the command line (CUI: Character User Interface). In particular, many of these programs are specifically designed for use on the Linux operating system. We will thus use a Linux OS environment in this course. 
+
+To ensure a consistent analysis environment, please set up access to Google Cloud Shell, an online Linux shell (Debian, x86_64). We will use the free version of this cloud service, which provides a basic Linux command-line interface and 5 GB of storage. For more details, refer to the official documentation: https://cloud.google.com/shell/docs.
+A Google account is required. If you already have one, simply go to the following link to get started: https://shell.cloud.google.com/
+
+
+
+###
 **Optional**
 
-The free version of the cloud shell is only for temporary use. For example, if you do not use the shell for 120 days, your account will be removed. There is also a usage limit (50 hours per week). So, in order to use the same environment after this course and continue the analysis, it would be good to set up the environment on your own computer. If you want to do this, see the following... 
+The free version of Google Cloud Shell is intended for temporary use. For example, if you don’t use the shell for 120 days, your account will be deactivated. There is also a usage limit of 50 hours per week. Therefore, if you wish to continue using the same environment after the course and carry on with your analyses, it is recommended that you set up the environment on your own computer. If you’d like to do this, please refer to the following instructions...
 
 **Linux users**: run the analysis on your "Terminal" instead of using Google Cloud Shell
 
-**Mac users**: same as Linux users ("Terminal" can be found in the "Utilities" folder), but some commands do not work with the default (e.g. wget), so you need to install some software as shown below.
+**Mac users**: same as Linux users ("Terminal" can be found in the "Utilities" folder), but some commands do not work with the default (e.g. wget), so you need to install some software as shown below. 
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" ##Install Homebrew
@@ -25,16 +36,16 @@ wsl --install
 wsl
 ```
 
-## Basic commands of Linux
-If you are not familiar with the Linux command lines, see the following link about Linux basic commands. 
+## 2. Basic Linux commands
+
+Unfortunately, we don’t have enough time to start from the very basics of command line usage. If you are not familiar with Linux command lines, please refer to the following link for an introduction to basic Linux commands. I have also included some tutorials about command lines in the slides (Day0.pdf).
+If you still have difficulties, don’t hesitate to contact me! I can help you learn how to use the shell and other basics.
 
 **Turotial:** https://ubuntu.com/tutorials/command-line-for-beginners#1-overview
 
-## Installing the software
-The following software is required for the analysis. Mainly, you can just copy and paste them in your terminal and see if they are working.
-You need to change the directory path according to your location.
+## 3. Installing the software
 
-**0. Opening 
+The following software is required for the analysis. In most cases, you can simply copy and paste the commands into your terminal to check if they are working. Illustrated instructions are provided in Day0.pdf. Please install the software step by step, following the commands below and the slides.
 
 
 **1. Creating the working directory and moving to there**
@@ -154,6 +165,9 @@ BiocManager::install("ShortRead")
 BiocManager::install("dada2")
 library(dada2)
 packageVersion("dada2")
+
+
+
 #Can you see the version of dada2? If so, dada2 was correctly installed!
 
 q()
