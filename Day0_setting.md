@@ -1,4 +1,4 @@
-# Day0:
+# Day0
 
 To ensure a smooth start to the analysis, please set up your environment and install the software we will use in the course by following the instructions below. If you encounter any issues during the setup, **contact me before the course begins!**. You can either visit my office or send an email to shumpei.yamakawa**@**gmail.com (remove **). 
 
