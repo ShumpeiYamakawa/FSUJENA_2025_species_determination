@@ -87,7 +87,7 @@ https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abc
 ## Contact
 Shumpei Yamakawa
 
-email: shumpei.yamakawa@gmail.com
+email: shumpei.yamakawa**@**gmail.com (remove **)
 
 office: 204, Zoology Institute
 
