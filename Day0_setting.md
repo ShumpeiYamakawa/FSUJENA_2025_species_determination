@@ -1,6 +1,6 @@
 # Day0
 
-To ensure a smooth start to the analysis, please set up your environment and install the software we will use in the course by following the instructions below. If you encounter any issues during the setup, **contact me before the course begins!**. You can either visit my office or send an email to shumpei.yamakawa**@**gmail.com (remove **). 
+To ensure a smooth start to the analysis, please set up your environment and install the software we will use in the course by following the instructions below. If you encounter any issues during the setup, **contact me before the course begins!** You can either visit my office or send an email to shumpei.yamakawa**@**gmail.com (remove **). 
 
 
 ****For a tutorial on installation, see Day0.pdf, which was uploaded to this GitHub page.****
@@ -165,9 +165,6 @@ BiocManager::install("ShortRead")
 BiocManager::install("dada2")
 library(dada2)
 packageVersion("dada2")
-
-
-
 #Can you see the version of dada2? If so, dada2 was correctly installed!
 
 q()
