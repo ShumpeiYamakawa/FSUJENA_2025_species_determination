@@ -50,7 +50,7 @@ The following software is required for the analysis. In most cases, you can simp
 
 **1. Creating the working directory and moving to there**
 ```bash
-makir test_meta
+mkdir test_meta
 cd test_meta
 ```
 
