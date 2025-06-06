@@ -13,6 +13,7 @@ sudo apt install --no-install-recommends r-base
 ```bach
 cd test_meta
 mkdir Sample5
+#Any directory names are fine 
 cd Sample5
 
 wget https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abcfaa1f05052d848759684240aeb4c01cd133/Sample5_L001_R1_001.fastq.gz
@@ -21,6 +22,15 @@ wget https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/
 
 
 **Viewing the raw data**
+```
+gunzip Sample5_L001_R1_001.fastq.gz
+cat Sample5_L001_R1_001.fastq | head
+cat Sample5_L001_R1_001.fastq | seqkit fq2fa | head
+cat Sample5_L001_R1_001.fastq | seqkit fq2fa | less
+#less can be terminated by typing "q"
+
+gzip Sample5_L001_R1_001.fastq
+```
 
 **Quality check**
 
