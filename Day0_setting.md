@@ -168,5 +168,5 @@ packageVersion("dada2")
 #Can you see the version of dada2? If so, dada2 was correctly installed!
 
 q()
-#This terminates R console and go back to bash terminal
+#This terminates R console, and you will go back to bash terminal
 ```
