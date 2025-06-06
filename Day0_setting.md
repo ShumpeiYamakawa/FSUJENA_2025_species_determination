@@ -79,11 +79,21 @@ The software for manipulating the sequence files. See also https://bioinf.shenwe
 cd ~/test_meta
 #move to the test directory
 wget https://github.com/shenwei356/seqkit/releases/download/v2.10.0/seqkit_linux_amd64.tar.gz
-tar -xvzf seqkit_linux_amd64.tar.gz 
-sudo cp seqkit /usr/local/bin/
+tar -xvzf seqkit_linux_amd64.tar.gz
+mkdir seqkit_dir
+mv seqkit seqkit_dir/
+cd seqkit_dir
+pwd 
+#Copy the displayed path!! 
+echo 'export PATH="**YOUR PATH***:$PATH"' >> ~/.bashrc; source ~/.bashrc
+#Paste the path you copied to ***YOUR PATH***!!
 
 seqkit -h
-#If you see the description about Blast Search, then the installation worked.
+#If you see the description about seqkit Search, then the installation worked.
+
+cd ~/
+#Go back to the home directory
+
 ```
 
 **4. update/developer environments**
@@ -157,7 +167,7 @@ R
 R provides a lot of the "packages" which are designed for specific analysis, and the package "dada2" performs to "infer exact amplicon sequence variants (ASVs) from amplicon data (https://benjjneb.github.io/dada2/)". This package needs to be installed in R console.
 
 ```R
-# install the softwares
+# install the software
 install.packages(c("RcppEigen", "png", "deldir", "interp", "latticeExtra"))
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
