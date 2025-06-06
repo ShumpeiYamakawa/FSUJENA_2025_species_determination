@@ -1,13 +1,22 @@
 ## Day1
 
+**R set up**
+```
+sudo apt update -qq
+sudo apt install --no-install-recommends software-properties-common dirmngr
+wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+sudo apt install --no-install-recommends r-base
+```
+
 **Download the raw read sequences**
 ```bach
 cd test_meta
 mkdir Sample5
 cd Sample5
 
-wget
-wget
+wget https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abcfaa1f05052d848759684240aeb4c01cd133/Sample5_L001_R1_001.fastq.gz
+wget https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abcfaa1f05052d848759684240aeb4c01cd133/Sample5_L001_R2_001.fastq.gz
 ```
 
 
