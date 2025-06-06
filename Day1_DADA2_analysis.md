@@ -1,7 +1,7 @@
 ## Day1
 
 **R set up**
-```
+```bash
 sudo apt update -qq
 sudo apt install --no-install-recommends software-properties-common dirmngr
 wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
@@ -10,7 +10,7 @@ sudo apt install --no-install-recommends r-base
 ```
 
 **Download the raw read sequences**
-```bach
+```bash
 cd test_meta
 mkdir Sample5
 #Any directory names are fine 
@@ -22,7 +22,7 @@ wget https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/
 
 
 **Viewing the raw data**
-```
+```bash
 gunzip Sample5_L001_R1_001.fastq.gz
 cat Sample5_L001_R1_001.fastq | head
 cat Sample5_L001_R1_001.fastq | seqkit fq2fa | head
