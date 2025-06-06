@@ -10,7 +10,10 @@ wget
 wget
 ```
 
-**scripts**
+
+**Viewing the raw data**
+
+**Quality check**
 
 ```R
 
@@ -28,6 +31,8 @@ fnRs <- sort( list.files(path,
 
 sample.names <- sapply(strsplit(basename(fnFs), "_"), `[`, 1)
 
+
+
 png("plot_fnFs.png", width=800, height=600)
 plotQualityProfile(fnFs[1:2])                                                                                                                                                          
 dev.off()
@@ -35,7 +40,11 @@ dev.off()
 png("plot_fnRs.png", width=800, height=600)
 plotQualityProfile(fnRs[1:2])                                                                                                                                                          
 dev.off()
+```
 
+**Filtering**
+
+```R
 filtFs <- file.path(path, "filtered", paste0(sample.names, "_F_filt.fastq.gz"))
 filtRs <- file.path(path, "filtered", paste0(sample.names, "_R_filt.fastq.gz"))
 
