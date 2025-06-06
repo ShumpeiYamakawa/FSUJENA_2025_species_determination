@@ -33,6 +33,10 @@ gzip Sample5_L001_R1_001.fastq
 ```
 
 **Quality check**
+```bash
+R
+#open R console
+```
 
 ```R
 
