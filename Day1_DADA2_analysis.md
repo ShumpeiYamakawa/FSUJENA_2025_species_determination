@@ -1,5 +1,33 @@
 ## Day1
 
+
+**Download the raw read sequences**
+```bash
+cd test_meta
+mkdir Sample5
+#Any names are okay
+cd Sample5
+
+wget https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/raw/refs/heads/main/Sample5_L001_R1_001.fastq.gz
+wget https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/raw/refs/heads/main/Sample5_L001_R2_001.fastq.gz
+```
+
+
+**Viewing the raw data**
+```bash
+gunzip Sample5_L001_R1_001.fastq.gz
+#check the file contents
+head Sample5_L001_R1_001.fastq
+less Sample5_L001_R1_001.fastq
+
+#change fastaq to fasta
+cat Sample5_L001_R1_001.fastq | seqkit fq2fa | head
+cat Sample5_L001_R1_001.fastq | seqkit fq2fa | less
+#less can be terminated by typing "q"
+
+gzip Sample5_L001_R1_001.fastq
+```
+
 **R set up**
 ```bash
 sudo apt update -qq
@@ -7,29 +35,6 @@ sudo apt install --no-install-recommends software-properties-common dirmngr
 wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
 sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
 sudo apt install --no-install-recommends r-base
-```
-
-**Download the raw read sequences**
-```bash
-cd test_meta
-mkdir Sample5
-#Any directory names are fine 
-cd Sample5
-
-wget https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abcfaa1f05052d848759684240aeb4c01cd133/Sample5_L001_R1_001.fastq.gz
-wget https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abcfaa1f05052d848759684240aeb4c01cd133/Sample5_L001_R2_001.fastq.gz
-```
-
-
-**Viewing the raw data**
-```bash
-gunzip Sample5_L001_R1_001.fastq.gz
-cat Sample5_L001_R1_001.fastq | head
-cat Sample5_L001_R1_001.fastq | seqkit fq2fa | head
-cat Sample5_L001_R1_001.fastq | seqkit fq2fa | less
-#less can be terminated by typing "q"
-
-gzip Sample5_L001_R1_001.fastq
 ```
 
 **Quality check**
