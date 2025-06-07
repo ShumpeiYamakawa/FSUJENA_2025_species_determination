@@ -48,10 +48,11 @@ Slides: Day1.pdf (not uploaded yet)
 
 Files:
 Sample5_L001_R1_001.fastq.gz
-https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abcfaa1f05052d848759684240aeb4c01cd133/Sample5_L001_R1_001.fastq.gz
+https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/raw/refs/heads/main/Sample5_L001_R1_001.fastq.gz
+
 
 Sample5_L001_R2_001.fastq.gz
-https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abcfaa1f05052d848759684240aeb4c01cd133/Sample5_L001_R2_001.fastq.gz
+https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/raw/refs/heads/main/Sample5_L001_R2_001.fastq.gz
 
 
 **Day 2** 
