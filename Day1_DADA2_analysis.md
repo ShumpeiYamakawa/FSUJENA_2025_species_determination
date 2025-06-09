@@ -46,27 +46,30 @@ R
 ```R
 
 library(dada2)
-path <- "./" # fastq.gz が入ったフォルダの名前を入れる
-head( list.files(path) )　# list.files() で指定したフォルダの中身を確認。head() で最初の6個だけ表示
 
-fnFs <- sort(list.files(path, 
-                        pattern="_R1_001.fastq", 
-                        full.names = TRUE) )
+#Assign the 
+fnFs <- c("Sample5_L001_R1_001.fastq.gz")
+fnRs <- c("Sample5_L001_R2_001.fastq.gz")
+sample.names <- c("Sample5")
 
-fnRs <- sort( list.files(path, 
-                         pattern="_R2_001.fastq", 
-                         full.names = TRUE))
-
-sample.names <- sapply(strsplit(basename(fnFs), "_"), `[`, 1)
-
+##Automatic
+#path <- "./" # name of the folder having fastq.gz
+#head( list.files(path) )　# check
+#fnFs <- sort(list.files(path, 
+#                        pattern="_R1_001.fastq", 
+#                        full.names = TRUE) )
+#fnRs <- sort( list.files(path, 
+#                         pattern="_R2_001.fastq", 
+#                         full.names = TRUE))
+#sample.names <- sapply(strsplit(basename(fnFs), "_"), `[`, 1)
 
 
 png("plot_fnFs.png", width=800, height=600)
-plotQualityProfile(fnFs[1:2])                                                                                                                                                          
+plotQualityProfile(fnFs)
 dev.off()
 
 png("plot_fnRs.png", width=800, height=600)
-plotQualityProfile(fnRs[1:2])                                                                                                                                                          
+plotQualityProfile(fnRs)
 dev.off()
 ```
 
@@ -76,13 +79,26 @@ dev.off()
 filtFs <- file.path(path, "filtered", paste0(sample.names, "_F_filt.fastq.gz"))
 filtRs <- file.path(path, "filtered", paste0(sample.names, "_R_filt.fastq.gz"))
 
+filtFs <- c(".//filtered/Sample5_L001_R1_filtered_001.fastq.gz")
+filtRs <- c(".//filtered/Sample5_L001_R2_filtered_001.fastq.gz")
 names(filtFs) <- sample.names
 names(filtRs) <- sample.names
 
-out <- filterAndTrim(fnFs, filtFs, fnRs, filtRs, truncLen=c(150,100),
+out <- filterAndTrim(fnFs, filtFs, fnRs, filtRs, truncLen=c(200,200),
               maxN=0, maxEE=c(2,2), truncQ=2, rm.phix=TRUE,
               compress=TRUE, multithread=TRUE) # On Windows set multithread=FALSE
 
+png("plot_fnFs_filtered.png", width=800, height=600)
+plotQualityProfile(filtFs)
+dev.off()
+
+png("plot_fnRs_filtered.png", width=800, height=600)
+plotQualityProfile(filtRs)
+dev.off()
+```
+
+**Error rate**
+```R
 errF <- learnErrors(filtFs, multithread=TRUE)
 errR <- learnErrors(filtRs, multithread=TRUE)
 
@@ -99,13 +115,29 @@ dadaRs <- dada(filtRs, err=errR, multithread=TRUE)
 
 dadaFs
 dadaRs
+```
 
+**Marge**
+```R
 mergers <- mergePairs(dadaFs, filtFs, dadaRs, filtRs, verbose=TRUE)
 # Inspect the merger data.frame from the first sample
 head(mergers[[1]])
+```
 
+**Output to shell**
+```R
 seqtab <- makeSequenceTable(mergers)
 dim(seqtab)
+
+sink("mergers_table")
+seqtab
+sink()
+```
+
+**Making fasta file**
+```bash
+cat Sample5_asv.csv | awk -F"," '{print $1}' | sed -e 1'd' | sed -e s/"\""//g | awk '{print "seq" NR "\t" $0}' | seqkit tab2fx > Sample5_asv.fa
+
 
  wget https://zenodo.org/records/1172783/files/silva_nr_v132_train_set.fa.gz
 
