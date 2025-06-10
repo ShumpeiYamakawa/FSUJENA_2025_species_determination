@@ -47,23 +47,12 @@ R
 
 library(dada2)
 
-#Assign the 
+# Assign the file path to the R objects
 fnFs <- c("Sample5_L001_R1_001.fastq.gz")
 fnRs <- c("Sample5_L001_R2_001.fastq.gz")
 sample.names <- c("Sample5")
 
-##Automatic
-#path <- "./" # name of the folder having fastq.gz
-#head( list.files(path) )　# check
-#fnFs <- sort(list.files(path, 
-#                        pattern="_R1_001.fastq", 
-#                        full.names = TRUE) )
-#fnRs <- sort( list.files(path, 
-#                         pattern="_R2_001.fastq", 
-#                         full.names = TRUE))
-#sample.names <- sapply(strsplit(basename(fnFs), "_"), `[`, 1)
-
-
+#quality check
 png("plot_fnFs.png", width=800, height=600)
 plotQualityProfile(fnFs)
 dev.off()
@@ -76,9 +65,6 @@ dev.off()
 **Filtering**
 
 ```R
-filtFs <- file.path(path, "filtered", paste0(sample.names, "_F_filt.fastq.gz"))
-filtRs <- file.path(path, "filtered", paste0(sample.names, "_R_filt.fastq.gz"))
-
 filtFs <- c(".//filtered/Sample5_L001_R1_filtered_001.fastq.gz")
 filtRs <- c(".//filtered/Sample5_L001_R2_filtered_001.fastq.gz")
 names(filtFs) <- sample.names
@@ -97,28 +83,29 @@ plotQualityProfile(filtRs)
 dev.off()
 ```
 
-**Error rate**
+**Error rate estimate**
+
 ```R
 errF <- learnErrors(filtFs, multithread=TRUE)
 errR <- learnErrors(filtRs, multithread=TRUE)
 
-png("plot_error_filtFs.png", width=800, height=600)
-plotErrors(errF, nominalQ=TRUE)
-dev.off()
+#you can visualize the error rate using the following commands
+#png("plot_error_filtFs.png", width=800, height=600)
+#plotErrors(errF, nominalQ=TRUE)
+#dev.off()
+#png("plot_error_filtRs.png", width=800, height=600)
+#plotErrors(errR, nominalQ=TRUE)
+#dev.off()
+```
 
-png("plot_error_filtRs.png", width=800, height=600)
-plotErrors(errR, nominalQ=TRUE)
-dev.off()
-
+**Marge**
+```R
 dadaFs <- dada(filtFs, err=errF, multithread=TRUE)
 dadaRs <- dada(filtRs, err=errR, multithread=TRUE)
 
 dadaFs
 dadaRs
-```
 
-**Marge**
-```R
 mergers <- mergePairs(dadaFs, filtFs, dadaRs, filtRs, verbose=TRUE)
 # Inspect the merger data.frame from the first sample
 head(mergers[[1]])
