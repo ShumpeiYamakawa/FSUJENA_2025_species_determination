@@ -26,6 +26,7 @@ cat Sample5_L001_R1_001.fastq | seqkit fq2fa | less
 #less can be terminated by typing "q"
 
 gzip Sample5_L001_R1_001.fastq
+###Do not forget to compress the fastq file!!!
 ```
 
 **R set up**
@@ -101,9 +102,9 @@ errR <- learnErrors(filtRs, multithread=TRUE)
 **Marge**
 ```R
 dadaFs <- dada(filtFs, err=errF, multithread=TRUE)
-dadaRs <- dada(filtRs, err=errR, multithread=TRUE)
-
 dadaFs
+
+dadaRs <- dada(filtRs, err=errR, multithread=TRUE)
 dadaRs
 
 mergers <- mergePairs(dadaFs, filtFs, dadaRs, filtRs, verbose=TRUE)
@@ -116,19 +117,16 @@ head(mergers[[1]])
 seqtab <- makeSequenceTable(mergers)
 dim(seqtab)
 
-sink("mergers_table")
-seqtab
-sink()
+write.csv(seqtab, file = "Sample5_asv.csv", quote = FALSE)
+
+q() #terminate R console
+
 ```
 
 **Making fasta file**
 ```bash
 cat Sample5_asv.csv | awk -F"," '{print $1}' | sed -e 1'd' | sed -e s/"\""//g | awk '{print "seq" NR "\t" $0}' | seqkit tab2fx > Sample5_asv.fa
-
-
- wget https://zenodo.org/records/1172783/files/silva_nr_v132_train_set.fa.gz
-
-taxa <- assignTaxonomy(seqtab.nochim, "~/tax/silva_nr_v132_train_set.fa.gz", multithread=TRUE)
+```
 
 
 
