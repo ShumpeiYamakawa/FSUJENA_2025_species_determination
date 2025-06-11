@@ -114,10 +114,7 @@ head(mergers[[1]])
 
 **Output to shell**
 ```R
-seqtab <- makeSequenceTable(mergers)
-dim(seqtab)
-
-write.csv(seqtab, file = "Sample5_asv.csv", quote = FALSE)
+write.table(mergers, file = "Sample5_asv.csv", row.names=FALSE, sep=",")
 
 q() #terminate R console
 
