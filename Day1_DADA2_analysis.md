@@ -1,5 +1,6 @@
 ## Day1
 
+You will learn how to process raw read data and perform annotation using eDNA metabarcoding data from a pond near Halle as test data.
 
 **Download the raw read sequences**
 ```bash
