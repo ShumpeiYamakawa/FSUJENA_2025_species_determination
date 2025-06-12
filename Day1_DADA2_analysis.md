@@ -126,8 +126,3 @@ cat Sample5_asv.csv | awk -F"," '{print $1}' | sed -e 1'd' | sed -e s/"\""//g | 
 ```
 
 
-
-
-
-
-```
