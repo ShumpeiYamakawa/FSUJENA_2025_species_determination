@@ -42,9 +42,9 @@ Slides: Day0.pdf
 
 **Day 1**
 
-Script and description: Day1_DADA2_analysis.md (not uploaded yet)
+Script and description: Day1_DADA2_analysis.md
 
-Slides: Day1.pdf (not uploaded yet)
+Slides: Day1.pdf
 
 Files:
 
@@ -70,19 +70,6 @@ Files:
 Script and description: Day3.md (not uploaded yet)
 
 Slides: Day3.pdf (not uploaded yet)
-
-Files:
-Sample6_L001_R1_001.fastq.gz
-https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abcfaa1f05052d848759684240aeb4c01cd133/Sample6_L001_R1_001.fastq.gz
-
-Sample6_L001_R2_001.fastq.gz
-https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abcfaa1f05052d848759684240aeb4c01cd133/Sample6_L001_R2_001.fastq.gz
-
-Sample7_L001_R1_001.fastq.gz
-https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abcfaa1f05052d848759684240aeb4c01cd133/Sample7_L001_R1_001.fastq.gz
-
-Sample7_L001_R2_001.fastq.gz
-https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/blob/91abcfaa1f05052d848759684240aeb4c01cd133/Sample7_L001_R2_001.fastq.gz
 
 
 
