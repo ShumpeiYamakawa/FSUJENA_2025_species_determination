@@ -6,7 +6,7 @@ If you were not able to complete the installation successfully, please execute t
 
 # Reset
 
-Some users encountered issues with setting the path or experienced system crashes during the setup. I recommend resetting your environment and starting the installation from scratch. To simplify this process, I have prepared a script that installs everything with a single command.
+Some users encountered issues with setting the path or experienced system crashes during the setup. I recommend resetting your environment and starting the installation from scratch. 
 
 1. Open a cloud shell
 2. Enter the following
@@ -19,6 +19,8 @@ sudo rm -rf $HOME
 
 
 # Installing
+
+To simplify the installation process, I have prepared a script that installs everything with a single command.
 
 **The analysis will take about 20 to 30 minutes (or even longer). During this time, please make sure that your network connection is not interrupted by a screensaver or other power-saving settings.**
 
