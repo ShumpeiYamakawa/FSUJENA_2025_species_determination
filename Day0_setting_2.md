@@ -22,7 +22,7 @@ sudo rm -rf $HOME
 
 To simplify the installation process, I have prepared a script that installs everything with a single command.
 
-**The analysis will take about 20 to 30 minutes (or even longer). During this time, please make sure that your network connection is not interrupted by a screensaver or other power-saving settings.**
+**The process will take about 20 to 30 minutes (or even longer). During this time, please make sure that your network connection is not interrupted by a screensaver or other power-saving settings.**
 
 4. Enter the following command
 
