@@ -1,4 +1,4 @@
-# Day 0 (Optional Session for Those Who Were Unable to Install)
+# Day 0 (Optional session for those who were unable to install)
 
 If you have already completed the installation and were able to run the analysis in the shell on Day 1, you can skip the following steps.
 
