@@ -1,10 +1,10 @@
-## Day 0 (Optional Session for Those Who Were Unable to Install)
+# Day 0 (Optional Session for Those Who Were Unable to Install)
 
 If you have already completed the installation and were able to run the analysis in the shell on Day 1, you can skip the following steps.
 
 If you were not able to complete the installation successfully, please execute the scripts below.
 
-# Reset
+## Reset
 
 Some users encountered issues with setting the path or experienced system crashes during the setup. I recommend resetting your environment and starting the installation from scratch. 
 
@@ -18,7 +18,7 @@ sudo rm -rf $HOME
 3. In the Cloud Shell menu, click more_vert More (the right upper button) and then click Restart. If prompted, click Restart in the confirmation dialog. (see https://cloud.google.com/shell/docs/resetting-cloud-shell)
 
 
-# Installing
+## Installing
 
 To simplify the installation process, I have prepared a script that installs everything with a single command.
 
