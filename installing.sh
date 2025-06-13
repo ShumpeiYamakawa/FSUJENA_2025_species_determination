@@ -31,8 +31,8 @@ echo 'export PATH="$p:$PATH"' >> ~/.bashrc; source ~/.bashrc
 
 echo " "
 echo "----------------------------------------"
-echo "installing developpers..."
-echo "just wait "
+echo "installing developers..."
+echo " "
 echo " "
 
 sudo DEBIAN_FRONTEND=noninteractive apt update -y
@@ -59,9 +59,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install -y \
 echo " "
 echo "----------------------------------------"
 echo "installing R..."
-echo "this takes time "
-echo "do not disturb"
-echo "just wait "
+echo " "
 
 sudo apt update -qq
 sudo apt install -y --no-install-recommends software-properties-common dirmngr
@@ -72,9 +70,9 @@ sudo apt install -y --no-install-recommends r-base
 echo " "
 echo "----------------------------------------"
 echo "installing DADA2..."
-echo "just wait "
+echo "this will take 15–30 min"
+echo "just wait until you see **FINISHED**"
 echo " "
-
 
 sudo Rscript -e 'install.packages(c("RcppEigen", "png", "deldir", "interp", "latticeExtra"), ask = FALSE, quiet = TRUE); if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager", ask = FALSE, quiet = TRUE); BiocManager::install("ShortRead", ask = FALSE, update = FALSE, quiet = TRUE); BiocManager::install("dada2", ask = FALSE, update = FALSE, quiet = TRUE)'
 
