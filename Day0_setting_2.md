@@ -5,6 +5,7 @@ If you have already completed the installation and were able to run the analysis
 If you were not able to complete the installation successfully, please execute the scripts below.
 
 **Reset**
+
 Some users encountered issues with setting the path or experienced system crashes during the setup. I recommend resetting your environment and starting the installation from scratch. To simplify this process, I have prepared a script that installs everything with a single command.
 
 1. Open a cloud shell
