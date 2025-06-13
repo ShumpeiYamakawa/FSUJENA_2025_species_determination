@@ -15,7 +15,7 @@ Some users encountered issues with setting the path or experienced system crashe
 sudo rm -rf $HOME
 ```
 
-3. In the Cloud Shell menu, click more_vert More (the right upper button) and then click Restart. If prompted, click Restart in the confirmation dialog.
+3. In the Cloud Shell menu, click more_vert More (the right upper button) and then click Restart. If prompted, click Restart in the confirmation dialog. (see https://cloud.google.com/shell/docs/resetting-cloud-shell)
 
 
 # Installing
