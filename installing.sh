@@ -76,6 +76,8 @@ echo " "
 
 sudo Rscript -e 'install.packages(c("RcppEigen", "png", "deldir", "interp", "latticeExtra"), ask = FALSE, quiet = TRUE); if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager", ask = FALSE, quiet = TRUE); BiocManager::install("ShortRead", ask = FALSE, update = FALSE, quiet = TRUE); BiocManager::install("dada2", ask = FALSE, update = FALSE, quiet = TRUE)'
 
+echo " "
+echo "**FINISHED**"
 
 echo " "
 echo " "
