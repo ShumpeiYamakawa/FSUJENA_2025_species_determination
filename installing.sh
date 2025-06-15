@@ -72,10 +72,34 @@ echo "this will take 15–30 min"
 echo "just wait until you see **FINISHED**"
 echo " "
 
-Rscript -e 'install.packages(c("RcppEigen", "png", "deldir", "interp", "latticeExtra"), ask = FALSE, quiet = TRUE)' 
-sudo Rscript -e 'if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager", ask = FALSE, quiet = TRUE)' 
-Rscript -e 'BiocManager::install("ShortRead", ask = FALSE, update = FALSE, quiet = TRUE)'
-Rscript -e 'BiocManager::install("dada2", ask = FALSE, update = FALSE, quiet = TRUE)'
+#Rscript -e 'install.packages(c("RcppEigen", "png", "deldir", "interp", "latticeExtra"), ask = FALSE, quiet = TRUE)' 
+#sudo Rscript -e 'if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager", ask = FALSE, quiet = TRUE)' 
+#Rscript -e 'BiocManager::install("ShortRead", ask = FALSE, update = FALSE, quiet = TRUE)'
+#Rscript -e 'BiocManager::install("dada2", ask = FALSE, update = FALSE, quiet = TRUE)'
+
+
+
+R_LIB=~/R/x86_64-pc-linux-gnu-library/4.3
+mkdir -p "$R_LIB"
+
+# .Rprofile に libPath を書き込む（上書き）
+echo '.libPaths("'"$R_LIB"'")' > ~/.Rprofile
+
+# 通常のCRANパッケージをインストール（静かに）
+Rscript -e 'install.packages(c("png", "deldir", "interp", "latticeExtra"), lib="'"$R_LIB"'", repos="https://cloud.r-project.org", ask = FALSE, quiet = TRUE)'
+
+# BiocManagerとBioconductorパッケージをインストール（静かに）
+Rscript -e '
+lib <- "'"$R_LIB"'";
+if (!requireNamespace("BiocManager", quietly=TRUE)) install.packages("BiocManager", lib=lib, repos="https://cloud.r-project.org", ask=FALSE, quiet=TRUE);
+BiocManager::install("dada2", lib=lib, ask=FALSE, update=FALSE, quiet=TRUE)
+'
+
+
+
+
+
+
 
 echo " "
 echo "**FINISHED**"
