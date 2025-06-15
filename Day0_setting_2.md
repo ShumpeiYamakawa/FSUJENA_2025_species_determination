@@ -38,7 +38,7 @@ wget https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/raw/r
 source installing.sh
 ```
 
-7. Do not disturb the installation. Please do not type anything while the installation is in progress. The screen may appear to be frozen, but the installation is continuing.
+7. Do not disturb the installation (ex. do not type anything while the installation is in progress). The screen may appear to be frozen, but the installation is continuing.
 
 8. If you see the following message, the installation is complete.
 
