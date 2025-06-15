@@ -25,8 +25,7 @@ tar -xvzf seqkit_linux_amd64.tar.gz
 mkdir seqkit_dir
 mv seqkit seqkit_dir/
 cd seqkit_dir
-p=$(pwd)
-echo 'export PATH="$p:$PATH"' >> ~/.bashrc; source ~/.bashrc
+echo "export PATH=\"$(pwd):\$PATH\"" >> ~/.bashrc; source ~/.bashrc
 
 echo " "
 echo "----------------------------------------"
