@@ -1,6 +1,6 @@
 # Day2
 
-The following scripts are for t
+I am providing a customized script for performing a BLAST search against 35,267 metazoan 16S rRNA sequences and extracting taxonomic information (NCBI taxonomy, including phylum and class). Please note that the script is roughly designed and not formatted for publication-level use, so you may encounter missing or blank fields in some cases.
 
 
 **1. Set up**
@@ -61,25 +61,39 @@ sh 16s_metazoa_rrna_blast_annot.sh
  
 #Phylum 	 	 Class 	 Species 	 blast_tophit 	 blast_ident 	 abundance 	 seqs
 #-------------------------------------------------------------------------------------------
-#Arthropoda	Branchiopoda	Daphnia longispina	JN874595.1	97.521	128	seq63
-#Arthropoda	Branchiopoda	Eubosmina cf.	EU650685.1	98.347	67	seq93
-#Arthropoda	Branchiopoda	Scapholeberis mucronata	EF189615.1	98.326	33	seq114
-#Arthropoda	Branchiopoda	Simocephalus vetulus	LC382447.1	97.531	36	seq113
-#Arthropoda	Insecta	Cloeon dipterum	LC801945.1	96.680	43	seq109
-#Bryozoa	Phylactolaemata	Plumatella repens	DQ305341.1	98.438	31	seq115
-#Chordata	Actinopteri	Carassius auratus	DQ868870.1	99.674	59	seq101
-#Chordata	Actinopteri	Gasterosteus aculeatus	DQ027919.1	99.340	135	seq59
-#Chordata	Actinopteri	Leucaspius delineatus	NC_020357.1	99.342	68	seq92
-#Chordata	Actinopteri	Pseudorasbora interrupta	MN175390.1	99.342	5	seq125
-#Chordata	Amphibia	Bufo bufo	JN647011.1	99.669	202	seq54,seq100
-#Chordata	Amphibia	Pelophylax lessonae	MH105105.1	99.656	16	seq118
-#Chordata	Amphibia	Rana temporaria	KC977158.1	100.000	96	seq80
-#Chordata	Aves	Gallinula chloropus	DQ485864.1	98.635	38	seq112
-#Chordata	Mammalia	Myocastor coypus	AF422886.1	99.281	4	seq126
 #Rotifera	Eurotatoria	Keratella quadrata	AF499046.1	99.010	4439	seq6,seq8,seq18,seq21,seq27,seq29,seq34,seq40,seq120
 #-------------------------------------------------------------------------------------------
  
 #Output files are in Sample5_asv.csv_95
 
 
+```
+
+## Tasks
+Please profile the animal species in the following two freshwater datasets (Sample 6 and Sample 7). The sampling and sequencing methods are the same as those used for the test data (Sample 5). Follow the scripts you used on Day 1 and Day 2.
+
+1. Create a new directory for each dataset under the test_meta directory (e.g., Sample6 and Sample7).
+
+2. Move to each directory and download the sequence datasets (see details below).
+
+3. Load the data into R and check the quality using dada2.
+
+4. Generate and save an ASV file for each dataset using dada2.
+
+5. Copy the ASV files to the 16s_metazoa... directory.
+
+6. Annotate the sequences.
+
+7. Try processing another sample.
+
+
+```bash
+#Sample6
+wget https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/raw/refs/heads/main/Sample6_L001_R1_001.fastq.gz
+wget https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/raw/refs/heads/main/Sample6_L001_R2_001.fastq.gz
+
+
+#Sample7
+wget https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/raw/refs/heads/main/Sample7_L001_R1_001.fastq.gz
+wget https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/raw/refs/heads/main/Sample7_L001_R2_001.fastq.gz
 ```
