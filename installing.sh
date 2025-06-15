@@ -11,8 +11,7 @@ echo " "
 wget https://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.16.0+-x64-linux.tar.gz
 tar -xvzf ncbi-blast-2.16.0+-x64-linux.tar.gz
 cd ncbi-blast-2.16.0+/bin
-p=$(pwd)
-echo 'export PATH="$p:$PATH"' >> ~/.bashrc; source ~/.bashrc
+echo "export PATH=\"$(pwd):\$PATH\"" >> ~/.bashrc; source ~/.bashrc
 
 cd ~/test_meta
 
