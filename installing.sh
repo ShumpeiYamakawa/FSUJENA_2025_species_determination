@@ -74,6 +74,23 @@ echo " "
 
 sudo Rscript -e 'install.packages(c("RcppEigen", "png", "deldir", "interp", "latticeExtra"), ask = FALSE, quiet = TRUE); if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager", ask = FALSE, quiet = TRUE); BiocManager::install("ShortRead", ask = FALSE, update = FALSE, quiet = TRUE); BiocManager::install("dada2", ask = FALSE, update = FALSE, quiet = TRUE)'
 
+# Rのバージョンに合わせて4.xの部分を調整
+LIB_PATH=~/R/x86_64-pc-linux-gnu-library/4.3
+
+# ディレクトリ作成
+mkdir -p "$LIB_PATH"
+
+# Rscriptで直接パスを埋め込んで実行
+Rscript -e '
+lib <- "'"$LIB_PATH"'"
+install.packages(c("RcppEigen", "png", "deldir", "interp", "latticeExtra"), lib = lib, ask = FALSE, quiet = TRUE, repos = "https://cloud.r-project.org")
+if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager", lib = lib, ask = FALSE, quiet = TRUE, repos = "https://cloud.r-project.org")
+BiocManager::install("ShortRead", lib = lib, ask = FALSE, update = FALSE, quiet = TRUE)
+BiocManager::install("dada2", lib = lib, ask = FALSE, update = FALSE, quiet = TRUE)
+'
+
+
+
 echo " "
 echo "**FINISHED**"
 
