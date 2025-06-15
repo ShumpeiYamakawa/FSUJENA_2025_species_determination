@@ -121,20 +121,7 @@ q() #terminate R console
 
 ```
 
-**Making fasta file**
-```bash
-cat Sample5_asv.csv | awk -F"," '{print $1}' | sed -e 1'd' | sed -e s/"\""//g | awk '{print "seq" NR "\t" $0}' | seqkit tab2fx > Sample5_asv.fa
-```
 
-**Optional**
-```bash
-# Analyze the following datasets from different ponds
-wget https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/raw/refs/heads/main/Sample6_L001_R1_001.fastq.gz
-wget https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/raw/refs/heads/main/Sample6_L001_R2_001.fastq.gz
-
-wget https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/raw/refs/heads/main/Sample7_L001_R1_001.fastq.gz
-wget https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/raw/refs/heads/main/Sample7_L001_R2_001.fastq.gz
-```
 
 
 
