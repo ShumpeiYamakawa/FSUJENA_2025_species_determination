@@ -72,7 +72,10 @@ echo "this will take 15–30 min"
 echo "just wait until you see **FINISHED**"
 echo " "
 
-Rscript -e 'install.packages(c("RcppEigen", "png", "deldir", "interp", "latticeExtra"), ask = FALSE, quiet = TRUE); if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager", ask = FALSE, quiet = TRUE); BiocManager::install("ShortRead", ask = FALSE, update = FALSE, quiet = TRUE); BiocManager::install("dada2", ask = FALSE, update = FALSE, quiet = TRUE)'
+Rscript -e 'install.packages(c("RcppEigen", "png", "deldir", "interp", "latticeExtra"), ask = FALSE, quiet = TRUE)' 
+Rscript -e 'if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager", ask = FALSE, quiet = TRUE)' 
+Rscript -e 'BiocManager::install("ShortRead", ask = FALSE, update = FALSE, quiet = TRUE)'
+Rscript -e 'BiocManager::install("dada2", ask = FALSE, update = FALSE, quiet = TRUE)'
 
 echo " "
 echo "**FINISHED**"
