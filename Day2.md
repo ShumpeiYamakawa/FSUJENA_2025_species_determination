@@ -2,8 +2,6 @@
 
 
 
-```
-
 
 ```bash
 cd ~/test_meta/
