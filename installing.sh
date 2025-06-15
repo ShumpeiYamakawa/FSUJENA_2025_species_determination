@@ -73,7 +73,7 @@ echo "just wait until you see **FINISHED**"
 echo " "
 
 Rscript -e 'install.packages(c("RcppEigen", "png", "deldir", "interp", "latticeExtra"), ask = FALSE, quiet = TRUE)' 
-Rscript -e 'if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager", ask = FALSE, quiet = TRUE)' 
+sudo Rscript -e 'if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager", ask = FALSE, quiet = TRUE)' 
 Rscript -e 'BiocManager::install("ShortRead", ask = FALSE, update = FALSE, quiet = TRUE)'
 Rscript -e 'BiocManager::install("dada2", ask = FALSE, update = FALSE, quiet = TRUE)'
 
