@@ -13,6 +13,8 @@ cd 16s_metazoa_rrna_blast_annot
 sudo cp taxonkit /usr/local/bin/
 
 path=$(taxonkit | grep home | grep tax | head -n 1 | awk '{print $1}' | sed -e s/"\""//g )
-for i in names.dmp nodes.dmp delnodes.dmp merged.dmp ; do cp $i $path ; done
+[ -f "$path" ] && rm "$path"
+[ ! -d "$path" ] && mkdir -p "$path"
+for i in names.dmp nodes.dmp delnodes.dmp merged.dmp ; do cp "$i" "$path" ; done
 
 ```
