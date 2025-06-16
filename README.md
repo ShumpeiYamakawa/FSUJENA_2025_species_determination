@@ -21,11 +21,11 @@ In this course, you will learn species identification methods based on sequence 
 
 ・Metabarcoding Analysis 2: Annotating the amplicon sequences
 
-・Metabarcoding Analysis 3: Creating an annotation table
+・Practical exercise 1: Metabarcoding analysis of another dataset
 
 **Day 3 (27.06)**
 
-・Practical exercise: Species identification from raw data using learned methods
+・Practical exercise 2: Metabarcoding analysis of public dataset
 
 
 
@@ -35,16 +35,16 @@ The scripts, slides, and files that will be used in the course have been uploade
 
 **Day 0**
 
-Script and description: Day0_setting.md
+Script and description: Day0_setting.md, Day0_setting2.md
 
 Slides: Day0.pdf
 
 
 **Day 1**
 
-Script and description: Day1_DADA2_analysis.md
+Script and description: Day1.md
 
-Slides: Day1.pdf
+Slides: Day1_2.pdf
 
 Files:
 
@@ -58,16 +58,26 @@ https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/raw/refs/h
 
 **Day 2** 
 
-Script and description: Day1_2_DADA2_analysis.md (not uploaded yet), Day2_blast.md (not uploaded yet)
+Script and description: Day2.md
 
-Slides: Day2.pdf (not uploaded yet)
+Slides: Day1_2.pdf 
 
 Files:
+
+Sample6
+
+https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/raw/refs/heads/main/Sample6_L001_R1_001.fastq.gz
+https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/raw/refs/heads/main/Sample6_L001_R2_001.fastq.gz
+
+Sample 7
+
+https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/raw/refs/heads/main/Sample7_L001_R1_001.fastq.gz
+https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/raw/refs/heads/main/Sample7_L001_R2_001.fastq.gz
 
 
 **Day 3**
 
-Script and description: Day3.md (not uploaded yet)
+Script and description: Day3.md
 
 Slides: Day3.pdf (not uploaded yet)
 
