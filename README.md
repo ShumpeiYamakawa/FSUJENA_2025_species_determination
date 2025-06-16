@@ -79,7 +79,7 @@ https://github.com/ShumpeiYamakawa/FSUJENA_2025_species_determination/raw/refs/h
 
 Script and description: Day3.md
 
-Slides: Day3.pdf (not uploaded yet)
+Slides: Day3.pdf
 
 
 
