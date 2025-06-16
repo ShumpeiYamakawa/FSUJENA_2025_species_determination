@@ -23,6 +23,21 @@ sudo apt install --no-install-recommends r-base
 
 Analysis of the datasets from the publication.
 
+1. Create a new directory for each dataset under the test_meta directory (e.g., Sample6 and Sample7).
+
+2. Move to each directory and download the sequence datasets (see details below).
+
+3. Load the data into R and check the quality using dada2.
+
+4. Generate and save an ASV file for each dataset using dada2.
+
+5. Copy the ASV files to the 16s_metazoa... directory.
+
+6. Annotate the sequences.
+
+7. Try processing another sample.
+
+
 **Download fastq files from SRA**
 
 Find the BioProject ID and search for it in the SRA Run Selector (https://www.ncbi.nlm.nih.gov/Traces/study/) to find the run ID.
