@@ -1,7 +1,8 @@
 #!/bin/bash
 
 cd ~/test_meta/
-wget "https://www.dropbox.com/scl/fi/doxpopin5xbdb5j6gxvcw/16s_metazoa_rrna_blast_annot.tar.gz?rlkey=wagchmn1yjop19s80pdxke4v5&dl=1" -O 16s_metazoa_rrna_blast_annot.tar.gz
+
+wget "https://www.dropbox.com/scl/fi/8cxepr14ow0ypewhu4b3l/16s_metazoa_rrna_blast_annot.tar.gz?rlkey=ltevg9qi0a7dx7sqo7ged6pjy&dl=1" -O 16s_metazoa_rrna_blast_annot.tar.gz
 tar -zxvf 16s_metazoa_rrna_blast_annot.tar.gz
 rm 16s_metazoa_rrna_blast_annot.tar.gz
 cd 16s_metazoa_rrna_blast_annot
