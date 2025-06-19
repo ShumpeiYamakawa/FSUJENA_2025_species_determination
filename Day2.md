@@ -3,6 +3,8 @@
 I am providing a customized script for performing a BLAST search against 35,267 metazoan 16S rRNA sequences and extracting taxonomic information (NCBI taxonomy, including phylum and class). Please note that the script is roughly designed and not formatted for publication-level use, so you may encounter missing or blank fields in some cases.
 
 
+## 16s_metazoa_rrna_blast_annot
+
 **1. Set up**
 ```bash
 cd ~/test_meta
