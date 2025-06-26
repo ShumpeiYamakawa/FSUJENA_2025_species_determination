@@ -21,15 +21,33 @@ sudo apt install --no-install-recommends r-base
 ```
 
 
+**Download fastq files from SRA**
+
+Find the BioProject ID and search for it in the SRA Run Selector (https://www.ncbi.nlm.nih.gov/Traces/study/) to find the run ID.
+
+```bash
+fastq-dump --gzip --split-files ***RUN ID***
+```
+
+
+
+
 ## Tasks
 
 Analysis of the datasets from the publication.
 
-・Example 1: deep sea samples
 
-・Example 2: mosquito/fry samples
+Target
 
-・Dataset you found
+**・Example 1: deep sea samples**
+
+**・Example 2: mosquito/fry samples**
+
+**・Dataset you found**
+
+
+
+Working flow
 
 1. Create a new directory for each dataset under the test_meta directory (e.g., run id [SRR3233649] or sample features [deep_sea], do not use space).
 
@@ -43,22 +61,10 @@ Analysis of the datasets from the publication.
 
 6. Annotate the sequences in the directory.
 
--------------------------------------------
-
 **Evaluate the results of your analysis of a dataset found on SRA**
 
 7. Write and send a short report about the results (https://docs.google.com/forms/d/e/1FAIpQLSfTs3waEgm2DijM044nAUQhnMFUr2IuhOSFIiwLmjz8MnwjGQ/viewform?usp=header)
 
--------------------------------------------
-
-
-**Download fastq files from SRA**
-
-Find the BioProject ID and search for it in the SRA Run Selector (https://www.ncbi.nlm.nih.gov/Traces/study/) to find the run ID.
-
-```bash
-fastq-dump --gzip --split-files ***RUN ID***
-```
 
 
 
