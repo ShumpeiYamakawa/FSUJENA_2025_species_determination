@@ -34,9 +34,6 @@ fastq-dump --gzip --split-files ***RUN ID***
 
 ## Tasks
 
-Analysis of the datasets from the publication.
-
-
 Target
 
 **・Example 1: deep sea samples**
@@ -45,8 +42,7 @@ Target
 
 **・Dataset you found**
 
-
-
+---
 Working flow
 
 1. Create a new directory for each dataset under the test_meta directory (e.g., run id [SRR3233649] or sample features [deep_sea], do not use space).
@@ -64,7 +60,7 @@ Working flow
 **Evaluate the results of your analysis of a dataset found on SRA**
 
 7. Write and send a short report about the results (https://docs.google.com/forms/d/e/1FAIpQLSfTs3waEgm2DijM044nAUQhnMFUr2IuhOSFIiwLmjz8MnwjGQ/viewform?usp=header)
-
+---
 
 
 
