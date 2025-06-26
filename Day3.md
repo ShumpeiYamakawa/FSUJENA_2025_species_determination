@@ -24,7 +24,9 @@ sudo apt install --no-install-recommends r-base
 Analysis of the datasets from the publication.
 
 ・Example 1: deep sea samples
+
 ・Example 2: mosquito/fry samples
+
 ・Dataset you found
 
 1. Create a new directory for each dataset under the test_meta directory (e.g., run id [SRR3233649] or sample features [deep_sea], do not use space).
