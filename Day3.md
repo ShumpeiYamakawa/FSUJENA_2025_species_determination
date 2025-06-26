@@ -23,6 +23,10 @@ sudo apt install --no-install-recommends r-base
 
 Analysis of the datasets from the publication.
 
+・Example 1: deep sea samples
+・Example 2: mosquito/fry samples
+・Dataset you found
+
 1. Create a new directory for each dataset under the test_meta directory (e.g., run id [SRR3233649] or sample features [deep_sea], do not use space).
 
 3. Move to each directory and download the sequence datasets (see details below).
@@ -34,6 +38,14 @@ Analysis of the datasets from the publication.
 6. Copy the ASV files to the 16s_metazoa... directory.
 
 7. Annotate the sequences in the directory.
+
+-------------------------------------------
+
+**Evaluate the results of your analysis of a dataset found on SRA**
+
+8. Write and send a short report about the results (https://docs.google.com/forms/d/e/1FAIpQLSfTs3waEgm2DijM044nAUQhnMFUr2IuhOSFIiwLmjz8MnwjGQ/viewform?usp=header)
+
+-------------------------------------------
 
 
 **Download fastq files from SRA**
