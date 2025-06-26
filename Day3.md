@@ -29,21 +29,21 @@ Analysis of the datasets from the publication.
 
 1. Create a new directory for each dataset under the test_meta directory (e.g., run id [SRR3233649] or sample features [deep_sea], do not use space).
 
-3. Move to each directory and download the sequence datasets (see details below).
+2. Move to each directory and download the sequence datasets (see details below).
 
-4. Load the data into R and check the quality using dada2.
+3. Load the data into R and check the quality using dada2.
 
-5. Generate and save an ASV file for each dataset using dada2.
+4. Generate and save an ASV file for each dataset using dada2.
 
-6. Copy the ASV files to the 16s_metazoa... directory.
+5. Copy the ASV files to the 16s_metazoa... directory.
 
-7. Annotate the sequences in the directory.
+6. Annotate the sequences in the directory.
 
 -------------------------------------------
 
 **Evaluate the results of your analysis of a dataset found on SRA**
 
-8. Write and send a short report about the results (https://docs.google.com/forms/d/e/1FAIpQLSfTs3waEgm2DijM044nAUQhnMFUr2IuhOSFIiwLmjz8MnwjGQ/viewform?usp=header)
+7. Write and send a short report about the results (https://docs.google.com/forms/d/e/1FAIpQLSfTs3waEgm2DijM044nAUQhnMFUr2IuhOSFIiwLmjz8MnwjGQ/viewform?usp=header)
 
 -------------------------------------------
 
