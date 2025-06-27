@@ -38,7 +38,7 @@ Target
 
 **・Example 1: deep sea samples**
 
-**・Example 2: mosquito/fry samples**
+**・Example 2: mosquito/fly samples**
 
 **・Dataset you found**
 
