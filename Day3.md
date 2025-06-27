@@ -47,7 +47,7 @@ Working flow
 
 1. Create a new directory for each dataset under the test_meta directory (e.g., run id [SRR3233649] or sample features [deep_sea], do not use space).
 
-2. Move to each directory and download the sequence datasets (see details below).
+2. Move to each directory and download the sequence datasets.
 
 3. Load the data into R and check the quality using dada2.
 
